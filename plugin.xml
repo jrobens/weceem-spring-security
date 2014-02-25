@@ -1,4 +1,4 @@
-<plugin name='weceem-spring-security' version='1.2-M1' grailsVersion='2.3.5 &gt; *'>
+<plugin name='weceem-spring-security' version='1.2-M1' grailsVersion='2.3.6 &gt; *'>
   <author>jCatalog AG</author>
   <authorEmail>info@weceem.org</authorEmail>
   <title>Bridges Weceem authentication to Spring Security</title>
