@@ -1,7 +1,10 @@
+//import org.weceem.auth.WeceemUserDetailsService
 
 beans = {
-    userDetailsService(org.weceem.auth.WeceemUserDetailsService) {
+    /*
+    userDetailsService(WeceemUserDetailsService) {
         grailsApplication = ref('grailsApplication')
     }
+    */
     
 }

@@ -1,4 +1,4 @@
-<plugin name='weceem-spring-security' version='1.2-M1' grailsVersion='2.1 &gt; *'>
+<plugin name='weceem-spring-security' version='1.2-M1' grailsVersion='2.3.5 &gt; *'>
   <author>jCatalog AG</author>
   <authorEmail>info@weceem.org</authorEmail>
   <title>Bridges Weceem authentication to Spring Security</title>
@@ -10,5 +10,6 @@ Your application still needs to configure Spring-Security however. The domain cl
   <type>WeceemSpringSecurityGrailsPlugin</type>
   <resources>
     <resource>spring.resources</resource>
+    <resource>TestUser</resource>
   </resources>
 </plugin>

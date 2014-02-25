@@ -36,11 +36,13 @@ Your application still needs to configure Spring-Security however. The domain cl
         // TODO Implement additions to web.xml (optional), this event occurs before
     }
 
+    /*
     def doWithSpring = {
         userDetailsService(org.weceem.auth.WeceemUserDetailsService) {
             grailsApplication = ref('grailsApplication')
         }
     }
+    */
 
     def doWithDynamicMethods = { ctx ->
         // TODO Implement registering dynamic methods to classes (optional)
@@ -65,7 +67,9 @@ Your application still needs to configure Spring-Security however. The domain cl
                 if (log.debugEnabled) {
                     log.debug "Weceem security getUserEmail callback - user principal is: ${princ} (an instance of ${princ?.class})"
                 }
-                return (princ instanceof String) ? null : princ?.email
+                // I don't see any email in GrailsUser.java - should pull in from Config.groovy mapping. My principle doesn't have an email
+                // as this is the username
+                return "" // (princ instanceof String || princ?.email) ? null : princ?.email
             },
             getUserRoles : { ->
                 def princ = authenticateService.principal
